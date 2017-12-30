@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using com.shephertz.app42.paas.sdk.csharp;
-using com.shephertz.app42.paas.sdk.csharp.storage;
-using com.shephertz.app42.paas.sdk.csharp.user;
-using com.shephertz.app42.paas.sdk.csharp.upload;
+using com.paas.sdk.csharp;
+using com.paas.sdk.csharp.storage;
+using com.paas.sdk.csharp.user;
+using com.paas.sdk.csharp.upload;
 using LitJson;
 using System;
 using UnityEngine.UI;
@@ -27,8 +27,8 @@ public class DriverProgram : MonoBehaviour {
 	//Private data members
 	int randInt;
 	ServiceAPI serviceApi;
-	const string apiKey = "1a3c5db90391bbfc66219d9d77fb43bf9b78fcebecd18907ac797b33ea648e16";
-	const string secretKey = "fb93b7ad8d2a6f51ddf1f37b19be269fa4bb3592c8e7cc3835ed6e9daa1611c5";
+	const string apiKey = "e16";
+	const string secretKey = "11c5";
 
 	//SERVICES
 	StorageService storageService = null;
@@ -38,8 +38,8 @@ public class DriverProgram : MonoBehaviour {
 	string dbName = "DataViz";
 	string collectionName = "test";
 	string jsonData = "{}";
-	const string trafficDocId = "5a437636e4b06d9d2b1ee021";
-	const string scoreDocId = "5a438b44e4b009a7f592ca6f";
+	const string trafficDocId = "5a2b1ee021";
+	const string scoreDocId = "5a436f";
 	const string randomBase = "askjhflkdsfblkn234lksdhfsdf0";
 	const string nameBase = "abcdefghijklmnopqrstuvwx yz";
 
@@ -121,11 +121,6 @@ public class DriverProgram : MonoBehaviour {
 			{
 				Storage storage = (Storage)obj;
 				Debug.Log ("Storage Response : " + storage);
-//				IList<Storage.JSONDocument> jsonDocList = storage.GetJsonDocList();
-//				for(int i=0;i<storage.GetJsonDocList().Count;i++){
-//					Debug.Log ("ObjectId is : " + jsonDocList[i].GetDocId());
-//					Debug.Log ("jsonDoc is : " + jsonDocList[i].GetJsonDoc());
-//				}
 			}
 		}
 
